@@ -1,0 +1,9 @@
+.quiz-header {
+    padding: 0;
+    padding: 0.5rem;
+}
+.quiz-btn{
+    position: fixed;
+    bottom: 4rem;
+    right: 7rem;
+}
