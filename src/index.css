@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600&display=swap");
+@import url("https://droid-ui.netlify.app/components/card/card.css");
+@import url("https://droid-ui.netlify.app/components/button/button.css");
+
+:root{
+  --primary: #111212;
+  --primary-light:#191A1A;
+  --secondary: #ffffff;
+  --accent: #FFEA29;
+}
+*{
+  font-size: 16px;
+  font-family: 'Saira Condensed';
+  margin: 0;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-evenly{
+  justify-content: space-evenly;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.flex-end{
+ justify-content: flex-end;
+}
+.flex-start{
+  justify-content: flex-start;
+}
+.align-center{
+  align-items: center;
+}
+.gap-col-1{
+  column-gap: 1rem;
+}
+.w-5{
+  width: 5rem;
+}
+.m-0{
+  margin: 0;
+}
+.p-0{
+  padding: 0;
+}
