@@ -1,0 +1,15 @@
+.rules-list{
+    margin-top: 7rem;
+    color: var(--accent);
+}
+
+.rules-list li{
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+.rules-btn{
+margin-top: 5rem;
+ width: 8rem;
+ color: var(--secondary);
+ border-color: var(--secondary);
+}
