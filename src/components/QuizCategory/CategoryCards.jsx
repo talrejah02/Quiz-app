@@ -15,11 +15,11 @@ function CategoryCards({categoryName}) {
     navigate("/Rules")
   }  
   return (
-    <section class="card shadow">
-      <img class="card-img" src="Images/cloud.jpg" alt="" />
-      <section class="card-description">
-        <section class="card-detail">
-          <span class="card-title">{categoryName}</span>
+    <section className="card shadow">
+      <img className="card-img" src="Images/cloud.jpg" alt="" />
+      <section className="card-description">
+        <section className="card-detail">
+          <span className="card-title">{categoryName}</span>
         </section>
         <NavLink className="cart-btn" to="" onClick={()=>clickHandler()}>
           Play Now

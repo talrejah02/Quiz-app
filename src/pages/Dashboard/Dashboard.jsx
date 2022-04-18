@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useQuiz } from "../../context/Quizcontext";
 import "./dashboard.css";
 
 function Dashboard() {
+    const navigate =useNavigate()
   const { quiz,state } = useQuiz();
   
   return (
@@ -26,8 +28,9 @@ function Dashboard() {
           })}
         </div>
         <p className="score">score:{state.totalScore}</p>
-        <div></div>
+        
       </div>
+      <button className="btn btn-primary quiz-btn" onClick={()=>navigate("/")} >FINISH</button>
     </div>
   );
 }
