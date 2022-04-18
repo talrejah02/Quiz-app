@@ -15,6 +15,12 @@
     padding: 1rem;
     border: 1px solid var(--accent);
     color: var(--accent);
-    min-width: 15rem;
-    
+    min-width: 15rem; 
+}
+.content-items:hover{
+    cursor: pointer;
+}
+.clicked{
+    border: 1px solid var(--secondary); 
+    color: var(--secondary);
 }
