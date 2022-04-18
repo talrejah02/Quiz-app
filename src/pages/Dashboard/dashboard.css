@@ -1,0 +1,19 @@
+.display-question{
+
+}
+.question-container{
+
+}
+.question{
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+ color: var(--secondary);
+}
+.answer{
+  color: var(--accent);
+}
+.score{
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+ color: var(--secondary);   
+}
