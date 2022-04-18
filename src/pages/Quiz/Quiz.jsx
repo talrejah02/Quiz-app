@@ -13,9 +13,11 @@ function Quiz() {
     if(questionCounter === 4){
       setCounter(0)
       navigate("/dashboard")
+    }else{
+      setCounter((questionCounter)=>questionCounter+1)
+      setDisplay(true)
+
     }
-    const res = await setCounter((questionCounter)=>questionCounter+1)
-    setDisplay(true)
   }
   return (
     <div className='page-container '>
