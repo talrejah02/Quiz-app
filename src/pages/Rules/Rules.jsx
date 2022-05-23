@@ -1,9 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import "./Rules.css"
 
 
 function Rules() {
+  const location = useLocation()
   return (
     <div className='page-container'>
         <div className='page-header flex-col justify-center align-center'>
@@ -17,7 +18,7 @@ function Rules() {
                  <li>Each multiple choice question has only one correct answer.</li>
                  <li>To start, click the Start Quiz button. When finished, click the Submit</li>
              </ol>
-             <NavLink className="cart-btn rules-btn" to="/Quiz">
+        <NavLink className="cart-btn rules-btn" to={ `/Quiz?categoryName=${location.search.split("=")[1]}`}>
           NEXT
         </NavLink>
         </div>

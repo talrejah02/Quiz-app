@@ -1,8 +1,8 @@
-import React, {useState } from "react";
+import React, {useEffect, useState } from "react";
 import { useQuiz } from "../../context/Quizcontext";
 import "./QuizCard.css";
 
-function QuizCard({ quizQuestion }) {
+function QuizCard({ quizQuestion ,counter}) {
   const { answerDispatch } = useQuiz();
   const [answerState,setAnswer]=useState({
     answer_a:false,
@@ -10,9 +10,16 @@ function QuizCard({ quizQuestion }) {
     answer_c:false,
     answer_d:false
   })
-  const {answer_a,answer_b,answer_c,answer_d}=answerState
-  
+  const { answer_a, answer_b, answer_c, answer_d } = answerState
 
+  useEffect(() => {
+    setAnswer({
+    answer_a:false,
+    answer_b:false,
+    answer_c:false,
+    answer_d:false
+    })
+  },[counter])
   
   return (
     <div className="quiz-card flex-col justify-center align-center">
@@ -28,7 +35,6 @@ function QuizCard({ quizQuestion }) {
               payload: { answer: "answer_a", quizQuestion },
             });
             setAnswer({...answerState,answer_a:true})
-
           }}
         >
           {quizQuestion.answers.answer_a}
@@ -41,7 +47,10 @@ function QuizCard({ quizQuestion }) {
               type: "SCORE",
               payload: { answer: "answer_b", quizQuestion },
             })
-            setAnswer({...answerState,answer_b:true})
+            setAnswer({answer_a:false,
+              answer_b:true,
+              answer_c:false,
+              answer_d:false})
           }
           }
         >
@@ -55,7 +64,10 @@ function QuizCard({ quizQuestion }) {
               type: "SCORE",
               payload: { answer: "answer_c", quizQuestion },
             })
-            setAnswer({...answerState,answer_c:true})
+            setAnswer({answer_a:false,
+              answer_b:false,
+              answer_c:true,
+              answer_d:false})
           }
           }
         >
@@ -69,7 +81,10 @@ function QuizCard({ quizQuestion }) {
               type: "SCORE",
               payload: { answer: "answer_d", quizQuestion },
             })
-              setAnswer({...answerState,answer_d:true})
+              setAnswer({answer_a:false,
+                answer_b:false,
+                answer_c:false,
+                answer_d:true})
             }
           }
         >

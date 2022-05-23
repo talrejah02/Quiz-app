@@ -12,7 +12,7 @@ function CategoryCards({categoryName}) {
     const response = await axios.get(`https://quizapi.io/api/v1/questions?apiKey=${Quiz_key}&category=${categoryName}&difficulty=Easy&limit=5`)
     setQuiz(response.data)
     console.log(response.data)
-    navigate("/Rules")
+    navigate(`/Rules?categoryName=${categoryName}`)
   }  
   return (
     <section className="card shadow">

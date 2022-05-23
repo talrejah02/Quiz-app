@@ -26,7 +26,7 @@ function Quiz() {
        </div>
        <div className='underline'></div>
        <div className='quiz-container flex-row justify-center align-center '>
-         {displayState&&<QuizCard quizQuestion={quiz[questionCounter]} />
+         {displayState&&quiz.length >0 && <QuizCard quizQuestion={quiz[questionCounter]} counter={questionCounter} />
          }
        <button className="btn btn-primary quiz-btn" onClick={()=>nextClick()}>NEXT</button>
        </div>
